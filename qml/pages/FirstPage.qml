@@ -58,10 +58,13 @@ Page {
             }
             Text {
                 id: browser
+            //    readOnly : true
+                text: ""
                 width: page.width
                 color: Theme.primaryColor
-                font.pixelSize: Theme.fontSizeNormal
+                font.pixelSize: Theme.fontSizeSmall
                 wrapMode: Text.Wrap
+            //    Component.onCompleted: _editor.textFormat = TextEdit.RichText
             }
         }
     }
