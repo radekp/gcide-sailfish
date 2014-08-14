@@ -50,24 +50,21 @@ Page {
             width: page.width
             spacing: Theme.paddingLarge
 
-            ProgressBar {
-                minimumValue: 0
-                maximumValue: 100
-                value: 50
-            }
-
-            TextField {
+            SearchField {
                 focus: true
-                text: ""
+                width: parent.width
+                placeholderText: "Search for word..."
                 onTextChanged: dict.textChanged(text, browser)
             }
             Text {
                 id: browser
+            //    readOnly : true
                 text: ""
-                color: "white"
                 width: page.width
-                font.pointSize: 16
+                color: Theme.primaryColor
+                font.pixelSize: Theme.fontSizeSmall
                 wrapMode: Text.Wrap
+            //    Component.onCompleted: _editor.textFormat = TextEdit.RichText
             }
         }
     }
